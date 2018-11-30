@@ -1,14 +1,27 @@
 
 $(document).ready(function(){
+
+    //idea #1: global variables for the id's of each set of checkboxes+fieldset
+    var targetCheckBox = ":checkbox";
+    
+
+
+
     $(":checkbox").enhancedCheckBox();
+
     $(":checkbox").enhancedCheckBox("checkEm");
-    $('.check:button').toggle(function(){
-        $('checkbox-1').attr('checked','checked');
-        $(this).val('uncheck all');
-    },function(){
-        $('checkbox-1').removeAttr('checked');
-        $(this).val('check all');        
-    })
+
+    $("fieldset").click(function(){
+            //idea #2 parse id of clicked box, match to distinct ids of each set
+            console.log(this.id);
+            //get children
+
+            //activate
+    });
+
+
+
+   
 })
 
 document.getElementById("hi").innerHTML = "bye";
@@ -18,7 +31,7 @@ $.widget("custom.enhancedCheckBox", $.ui.checkboxradio, {
     enabled: true,
     checkEm: function(){
        // $(this).element.sibilings(":checkbox").prop("checked", "checked");
-        testd($(this).element.prop("checked"));
+       // testd($(this).element.prop("checked"));
         console.log()
     }
 
@@ -73,7 +86,7 @@ function testd(x){
 
 
 
-    
+
  /*
     var test = document.getElementById("xy"); // need to make general
     var elem = this;
