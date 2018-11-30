@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" src="style.css">
 
+  <link rel="stylesheet" src="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -17,33 +17,64 @@
 </head>
 
 <body>
-  <h2 id="hi">hi</h2>
+  
 
+<container class="col-lg-8" id="first">
+  
+  <div class="col-md-7">
+  <h2>Multiselect - Vertical</h2>
+      <fieldset class="col-sm-2" id="xy">
+        <legend>Hotel Ratings (enhanced): </legend>
+        <label for="checkbox-enhanced-1">2 Star</label>
+        <input type="checkbox" name="checkbox-enhanced-1" id="checkbox-1">
+        <label for="checkbox-enhanced-2">3 Star</label>
+        <input type="checkbox" name="checkbox-enhanced-2" id="checkbox-2">
+        <label for="checkbox-enhanced-3">4 Star</label>
+        <input type="checkbox" name="checkbox-enhanced-3" id="checkbox-3">
+        <label for="checkbox-enhanced-4">5 Star</label>
+        <input type="checkbox" name="checkbox-enhanced-4" id="checkbox-4">
+      </fieldset>
 
-  <fieldset id="xy">
-    <legend>Hotel Ratings: </legend>
-    <label for="checkbox-1">2 Star</label>
-    <input type="checkbox" name="checkbox-1" id="checkbox-1">
-    <label for="checkbox-2">3 Star</label>
-    <input type="checkbox" name="checkbox-2" id="checkbox-2">
-    <label for="checkbox-3">4 Star</label>
-    <input type="checkbox" name="checkbox-3" id="checkbox-3">
-    <label for="checkbox-4">5 Star</label>
-    <input type="checkbox" name="checkbox-4" id="checkbox-4">
-  </fieldset>
+      <fieldset class="col-sm-2" id="xyz">
+        <legend>Hotel Ratings (standard): </legend>
+        <label for="checkbox-1">2 Star</label>
+        <input type="checkbox" name="checkbox-1" id="checkbox-1">
+        <label for="checkbox-2">3 Star</label>
+        <input type="checkbox" name="checkbox-2" id="checkbox-2">
+        <label for="checkbox-3">4 Star</label>
+        <input type="checkbox" name="checkbox-3" id="checkbox-3">
+        <label for="checkbox-4">5 Star</label>
+        <input type="checkbox" name="checkbox-4" id="checkbox-4">
+      </fieldset>
+  </div>
+  
+  <div class="col-lg-9" id="horizontal">
+  <h2>Multiselect - Horizontal</h2>
+      <fieldset class="col-sm-5" id="xy">
+        <legend>Hotel Ratings: </legend>
+        <label for="checkbox-enhanced-1">2 Star</label>
+        <input type="checkbox" name="checkbox-enhanced-1" id="checkbox-1">
+        <label for="checkbox-enhanced-2">3 Star</label>
+        <input type="checkbox" name="checkbox-enhanced-2" id="checkbox-2">
+        <label for="checkbox-enhanced-3">4 Star</label>
+        <input type="checkbox" name="checkbox-enhanced-3" id="checkbox-3">
+        <label for="checkbox-enhanced-4">5 Star</label>
+        <input type="checkbox" name="checkbox-enhanced-4" id="checkbox-4">
+      </fieldset>
 
-  <fieldset id="xyz">
-    <legend>Hotel Ratings: </legend>
-    <label for="checkbox-1">2 Star</label>
-    <input type="checkbox" name="checkbox-1" id="checkbox-1">
-    <label for="checkbox-2">3 Star</label>
-    <input type="checkbox" name="checkbox-2" id="checkbox-2">
-    <label for="checkbox-3">4 Star</label>
-    <input type="checkbox" name="checkbox-3" id="checkbox-3">
-    <label for="checkbox-4">5 Star</label>
-    <input type="checkbox" name="checkbox-4" id="checkbox-4">
-  </fieldset>
-
+      <fieldset class="col-sm-5" id="xyz">
+        <legend>Hotel Ratings: </legend>
+        <label for="checkbox-1">2 Star</label>
+        <input type="checkbox" name="checkbox-1" id="checkbox-1">
+        <label for="checkbox-2">3 Star</label>
+        <input type="checkbox" name="checkbox-2" id="checkbox-2">
+        <label for="checkbox-3">4 Star</label>
+        <input type="checkbox" name="checkbox-3" id="checkbox-3">
+        <label for="checkbox-4">5 Star</label>
+        <input type="checkbox" name="checkbox-4" id="checkbox-4">
+      </fieldset>
+  </div>
+</container>
   <script type="text/javascript" src="script.js"></script>
    <script type="text/javascript" src="widget.js"></script>
 </body>

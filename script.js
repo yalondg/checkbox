@@ -1,12 +1,21 @@
 
+//which checkboxes/fieldsets to apply enhancement to
+var targetCheckBox = "input[name^='checkbox-enhanced']";
+var targetField = "fieldset";
+
 $(document).ready(function(){
 
-    $(":checkbox").enhancedCheckBox();
+    var targetCheckBox = "input[name^='checkbox-enhanced']";
+    var targetField = "#xy";
 
-    $(":checkbox").enhancedCheckBox("checkEm");
 
+    $(targetCheckBox).enhancedCheckBox();
+
+    $(targetCheckBox).enhancedCheckBox("checkOut");
+    $(targetCheckBox).enhancedCheckBox("checkMid");
+ 
    
 
 
    
-})
+});

@@ -6,3 +6,33 @@
     padding: 500px;
     margin-left: 500px;
 }
+
+container{
+    border: 1px solid black;
+    justify-content: center;
+    float: middle;
+    align-content: center;  
+}
+
+body{
+    justify-content: center;
+    float: middle;
+    align-content: center;  
+}
+#first{
+    border: 2px solid black;
+    justify-content: center;
+    float: left;
+    align-content: center;  
+}
+
+#horizontal{
+    float: left;
+    display: inline-flex;
+}
+legend{
+    font-size: 10px;
+}
+#added{
+    background-color: red;
+}
