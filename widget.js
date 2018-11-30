@@ -13,23 +13,33 @@ $(function () {
 
 
     $(targetField).css('border', '2px dotted black');
-    $(targetField).css('background-color', 'grey');
+    $(targetField).css('background-color', "#DCDCDC");
+
+    //get number of elem
+
+    //decide whether to append
 
 
-   
 
 
 })
 
 
-    var counter = 0;
-var txt3 = document.createElement("div", { id: "added" });
-txt3.innerHTML = ".";
+var counter = 0;
+/*var txt3 = document.createElement("p", { id: "added" });
+txt3.text = ".";*/
+
+var txt3 = document.createElement("p");
+var node = document.createTextNode("O");
+txt3.append(node);
+
 
 
 $.widget("custom.enhancedCheckBox", $.ui.checkboxradio, {
     enabled: true,
     icon: false,
+    thisCheckName: $(this).parent().prop("for"),
+
     checkOut: function () {
         $(targetField).click(function (event) {
             event.stopPropagation();
@@ -49,26 +59,54 @@ $.widget("custom.enhancedCheckBox", $.ui.checkboxradio, {
         });
     },
     checkMid: function () {
-        var children = $(targetField).children(targetCheckBox);
+        var children = $(this).parent("fieldset");
 
-     
-        console.log(children.length + " \n");
-        console.log()
-      
 
-        $("label").children().each(function(){
-        //    console.log($(this).length + " \n");
+       // console.log(children.length + " \n");
+        console.log(this);
+
+
+        $("label").children().each(function () {
+            //    console.log($(this).length + " \n");
         });
-    
-       
-           $("label").append(txt3);
-             console.log("done" + counter);
-       
-           
-     
+
+        
+
+
 
       
-       
+            $("label").append(txt3);
+            console.log("done" + counter);
+     
+            reduceKids("label");
+
+        function reduceKids(children) {
+            
+            
+            $(children).each(function(){
+             var thisCheckName = this.id;
+            console.log(thisCheckName);
+            // RH CHECKBOX suffix #
+            var thisNum = thisCheckName.match(/\d+/);
+
+            //left hand checkbox -> CAN BE NULL IF RH=FIRST ONE.
+            var prevCheckName = $("input[name^='" + thisCheckName + "']").prev().prev().prop("name");
+
+            if (thisNum == 1) {
+                var myNode = document.getElementById(thisCheckName);
+                while (myNode.firstChild) {
+                    myNode.removeChild(myNode.firstChild);
+                    console.log("removed");
+                }
+            }
+            });
+           
+
+          /*  */
+        };
+
+
+
         $(txt3).click(function (event) {
             //prevent double clicks
             event.stopPropagation();
@@ -79,7 +117,7 @@ $.widget("custom.enhancedCheckBox", $.ui.checkboxradio, {
 
             //right hand checkbox
             var thisCheckName = $(this).parent().prop("for");
-            
+
             // RH CHECKBOX suffix #
             var thisNum = thisCheckName.match(/\d+/);
 
@@ -96,7 +134,7 @@ $.widget("custom.enhancedCheckBox", $.ui.checkboxradio, {
 
             if (toggler == 0) {
                 $("input[name^='" + thisCheckName + "']").prop("checked", true);
-                 $("input[name^='" + prevCheckName + "']").prop("checked", true);
+                $("input[name^='" + prevCheckName + "']").prop("checked", true);
                 console.log(toggler++ + " checked");
             }
             else {
@@ -112,37 +150,3 @@ $.widget("custom.enhancedCheckBox", $.ui.checkboxradio, {
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

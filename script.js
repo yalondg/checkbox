@@ -10,9 +10,13 @@ $(document).ready(function () {
 
 
     $(targetCheckBox).enhancedCheckBox();
-
     $(targetCheckBox).enhancedCheckBox("checkOut");
+
+  //  targetCheckBox = "input[name^='checkbox-enhanced-adj']";
     $(targetCheckBox).enhancedCheckBox("checkMid");
+   // $(targetCheckBox).enhancedCheckBox("checkMid");
+
+   
 
 
 
