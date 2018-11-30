@@ -1,17 +1,78 @@
-$.widget("custom.checkC", $.ui.checkboxradio,{
-    test: function(){
-        $(document).getElementById("hi").innerHTML = "lux";
-    }
+var toggler = 0;
+$(document).ready(function(){
+
+    //idea #1: global variables for the id's of each set of checkboxes+fieldset
+    var targetCheckBox = "input[name^='checkbox']";
+    var targetField = "#xy";
+
+    $(targetCheckBox).enhancedCheckBox();
+
+    $(targetCheckBox).enhancedCheckBox("checkEm");
+
+    $("fieldset").click(function(event){
+            event.stopPropagation();
+            event.preventDefault();
+            event.stopImmediatePropagation();
+       
+            //idea #2 parse id of clicked box, match to distinct ids of each set
+            //var fields = ;
+            var children = $(this).children(targetCheckBox);
+            if(toggler==0){
+             children.prop("checked", true);console.log(toggler++ + " checked"); }
+             else{
+             children.prop("checked", false);  console.log(toggler-- + " unchecked");}
+        
+    });
+
+
+
+   
 })
 
-//$("xyz").append.checkC();
 
-//$("xyz").test();
 
-$.widget( "custom.superDialog", $.ui.dialog, {
-    red: function() {
-        this.element.css( "color", "red" );
+
+$.widget("custom.enhancedCheckBox", $.ui.checkboxradio, {
+    enabled: true,
+    icon: false,
+    checkEm: function(){
+      
+        console.log()
     }
+
+
 });
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
-// Create a new <div>, convert it into a superDialog, and call the red() method.
+  
+    
+
+
