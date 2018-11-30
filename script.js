@@ -13,7 +13,16 @@ $(document).ready(function(){
 
     $("fieldset").click(function(){
             //idea #2 parse id of clicked box, match to distinct ids of each set
-            console.log(this.id);
+            //var fields = ;
+            var children = $(this).children(":checkbox");
+           
+           /* if(children.prop("checked")){
+            children.prop("checked", false)
+            
+            $( children ).checkboxradio( "refresh" );
+                     }
+            else{*/
+            children.prop("checked", true);//}
             //get children
 
             //activate
