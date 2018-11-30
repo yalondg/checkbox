@@ -3,7 +3,7 @@
 var targetCheckBox = "input[name^='checkbox-enhanced']";
 var targetField = "fieldset";
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     var targetCheckBox = "input[name^='checkbox-enhanced']";
     var targetField = "#xy";
@@ -13,9 +13,9 @@ $(document).ready(function(){
 
     $(targetCheckBox).enhancedCheckBox("checkOut");
     $(targetCheckBox).enhancedCheckBox("checkMid");
- 
-   
 
 
-   
+
+
+
 });
